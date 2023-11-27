@@ -1,0 +1,222 @@
+body {
+  margin: 0;
+  padding: 0;
+  color: #242424;
+  font-family: sans-serif;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+ul {
+  width: 100%;
+  float: left;
+  text-align: center;
+  padding: 0; /* Remova o espaçamento padrão da lista */
+
+}
+
+li {
+  padding: 0 10px; /* Adicione algum espaçamento entre os itens */
+  display: inline-block;
+  list-style: none;
+
+}
+
+.mymenu {
+  font-family: 'open_sansbold';
+  font-size: 1.6em;
+  text-decoration: none;
+  color: #4c4c4c;
+  border-bottom: 4px solid transparent;
+  transition: border-bottom .3s linear;
+}
+
+.mymenu:hover {
+  border-bottom: 4px solid #000000;
+}
+
+.btn_social {
+  width: 100%;
+  float: left;
+  display: flex;
+  margin: auto;
+}
+
+.btn_social ul {
+  width: auto;
+  margin: auto;
+  float: left;
+  display: flex;
+  padding: 0; /* Remova o espaçamento padrão da lista */
+}
+
+.btn_social ul li {
+  position: relative;
+  background: #555555;
+  list-style: none;
+  margin: 5px;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 3px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.btn_social ul li a {
+  width: 50px;
+  height: 50px;
+  margin-left: -18px ;
+  line-height: 53px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.4s;
+
+}
+
+.btn_social ul li::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 90%;
+  left: 0;
+  background: #ece7d5;
+  z-index: -1;
+  transform: scale(1);
+  background-repeat: no-repeat;
+}
+
+.btn_social ul li:nth-child(1)::before {
+  background-image: url(./images/instagram.png);
+}
+
+.btn_social ul li:nth-child(2)::before {
+  background-image: url(./images/youtube\ \(1\).png);
+}
+
+.btn_social ul li:nth-child(3)::before {
+  background-image: url(./images/whatsapp.png);
+}
+
+.btn_social ul li:hover::before {
+  transition: 0.4s;
+  top: 0%;
+}
+
+.btn_social ul li a:hover {
+  color: #555555;
+}
+
+
+/* Adicione regras de mídia para tornar o menu responsivo */
+@media only screen and (max-width: 600px) {
+  .btn_social ul li {
+      flex: 1; /* Faz com que os itens ocupem a largura total disponível em telas menores */
+      max-width: 100%; /* Garante que os itens não ultrapassem a largura total */
+  }
+}
+
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 900;
+  color: black;
+}
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+main {
+  display: block;
+  background-color: #ece7d5;
+}
+
+.container {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section.module p {
+  margin-bottom: 40px;
+}
+
+section.module:last-child {
+  margin-bottom: 0;
+}
+
+section.module h2 {
+  margin-bottom: 40px;
+  font-size: 30px;
+  margin-right: 10%;
+  margin-bottom: 2vw;
+}
+
+section.module.content {
+  padding: 40px 0;
+  background-color: #ece7d5;
+}
+
+section.module.parallax {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh !important;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+section.module.parallax:after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 8;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 40%, black 100%);
+}
+
+section.module.parallax-1 {
+  background-image: url(images/floresta.jpg);
+}
+
+section.module.parallax-2 {
+  background-image: url(images/bioma.jpg);
+}
+
+section.module.parallax-3 {
+  background-image: url(images/amazonia-peruana.jpg);
+}
+
+section.module.parallax-4 {
+  background-image: url(images/rio.jpg);
+}
+
+section.module.parallax h1 {
+  color: white;
+  text-align: center;
+  font-size: 78px;
+  z-index: 50;
+  text-transform: uppercase;
+
+}
+
+.area-1, .area-2, .area-3 {
+  visibility: hidden;
+}
+
+
+section.module p {
+  margin-bottom: 2vw; /* Adjust the margin based on your preference */
+  font-size: 18px; /* Set a base font size for the paragraph */
+  margin-right: 10%;
+}
